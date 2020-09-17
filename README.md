@@ -2,8 +2,6 @@
 
 
   <div style=display="inline-block";>
-    <img src="https://media.giphy.com/media/5MHNjQY61lkNsfdymT/giphy.gif" title="hover text">
+    <img src="https://media.giphy.com/media/5MHNjQY61lkNsfdymT/giphy.gif" width="600" height="400" title="hover text">
   
   </div>
-
-A new Ninja Flutter project.
