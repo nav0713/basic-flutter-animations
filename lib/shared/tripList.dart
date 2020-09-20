@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ninja_trips/components/transition-animation.dart';
 import 'package:ninja_trips/models/Trip.dart';
 import 'package:ninja_trips/screens/details.dart';
 
@@ -22,7 +23,7 @@ class _TripListState extends State<TripList> {
   void _addTrips() {
     // get data from db
     List<Trip> _trips = [
-      Trip(title: 'Beach Paradise', price: '350', nights: '3', img: 'beach.png'),
+      Trip(title: 'Beach Paradise', price: '350', nights: '3', img: 'beach.jpg'),
       Trip(title: 'City Break', price: '400', nights: '5', img: 'city.png'),
       Trip(title: 'Ski Adventure', price: '750', nights: '2', img: 'ski.png'),
       Trip(title: 'Space Blast', price: '600', nights: '4', img: 'space.png'),
@@ -39,7 +40,7 @@ class _TripListState extends State<TripList> {
   Widget _buildTile(Trip trip) {
     return ListTile(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Details(trip: trip)));
+        Navigator.push(context, TransitionAnimation(widget: Details(trip: trip)));
       },
       contentPadding: EdgeInsets.all(25),
       title: Column(
